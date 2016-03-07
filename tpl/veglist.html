@@ -1,0 +1,143 @@
+<a onclick="$.ui.scrollToTop('uiscrolltotop')" class="scrollTop"><i class="icomoon images"><img src="statics/icomoon_all_icons/PNG/arrow-up.png" alt=""></i></a>
+<div class="veg">
+	<div class="nav">
+		<ul class="list">
+			<li class=""><a data-cate="like" class="" href="#veglist/like"><i class="icon star"></i>我爱吃</a></li>
+			<li><a data-cate="nolike" class="" href="#veglist/nolike"><i class="icon error"></i>我不吃</a></li>
+			<li class="divider">所有菜品</li>
+			<li><a data-cate="ye" class="" href="#veglist/ye">叶菜类</a></li>
+			<li><a data-cate="gen" class="" href="#veglist/gen">根茎类</a></li>
+			<li><a data-cate="guo" class="" href="#veglist/guo">茄果类</a></li>
+			<li><a data-cate="all" class="" href="#veglist/all">全部</a></li>
+		</ul>
+	</div>
+	<div class="content  y-scroll">
+		<ul>
+			<li>
+				<div class="product">
+					<div class="img">							
+						<img src="server/2012032215350836466124.jpg" alt="">
+					</div>
+					<h3 class="title">茄子</h3>
+					<p>产品简要介绍产品简要介绍产品简要介绍产产品简要介绍产品简要介绍品简要介绍产品简要介绍产品简要介绍产品简要介绍</p>
+					<div class="input-group">
+			            <input id="a1" type="radio" name="v1" value="1">
+			            <label for="a1">想吃</label>
+			            <input id="a2" type="radio" name="v1" value="2">
+			            <label for="a2">忌口</label>
+			            <input id="a0" type="radio" name="v1" value="3" checked="checked">
+			            <label for="a0">无所谓</label>
+			        </div>
+				</div>				
+			</li>
+		</ul>
+	</div>
+</div>
+
+<script>
+
+(function(){
+	var h = window.location.hash.split('/')[1];
+	console.log(h);
+	if (h == 'like') {
+		$("#veglist .nav li [data-cate='like']").parent().addClass('active');
+		likeData();
+	}if(h == 'nolike'){
+		$("#veglist .nav li [data-cate='nolike']").parent().addClass('active');
+		nolikeData();		
+	}else{
+		vegData();
+	}
+
+
+	$('#veglist .nav').unbind('click');
+	$('#veglist').unbind('change');
+
+	$('#veglist .nav').on('click', 'a', function(event) {
+		var thisCate = $(this).attr('data-cate');
+		$("#veglist .nav li").removeClass('active');
+		$(this).parent().addClass('active');
+
+	});
+
+	function save(id){
+		return af.ajax({url: 'server/data.json'})
+	}
+
+	$('#veglist').on('change','input',function(){
+		var id = $(this).attr('data-id');
+		// af.when(
+		// 	save()
+		// )
+		$.ajax({url:'server/data.json'})
+		.then(function(res){			
+			$.ui.toast({'message':'已保存','position':'bc'})			
+		},function(){
+			$.ui.toast({'message':'保存失败','position':'bc','type':'error'})			
+		});
+	})
+
+	function getData(remote){
+		return $.ajax({url:remote,dataType:'json'})
+	}
+
+	function nolikeData(){
+		$.ui.showMask('loading...');		
+		$.ajax({
+			url: 'server/data.json',
+			dataType:'json'
+		}).then(function(res){
+			var html = template('veglistTpl',res);
+			$('#veglist .content').empty().append(html);
+			$.ui.hideMask();
+		},function(){
+			console.log('error')
+		});	
+	}
+
+	function likeData(){
+		$.ui.showMask('loading...');		
+		$.ajax({
+			url: 'server/data.json',
+			dataType:'json'
+		}).then(function(res){
+			var html = template('veglistTpl',res);
+			$('#veglist .content').empty().append(html);
+			$.ui.hideMask();
+		},function(){
+			console.log('error')
+		});	
+	}
+
+	function vegData(){	
+		$.ui.showMask('loading...');		
+		$.ajax({
+			url: 'http://123.56.235.156/cm/f/interface/dish/list',
+			dataType:'json'
+		}).then(function(res){
+			console.log(res);
+			var html = template('veglistTpl',res);
+			$('#veglist .content').empty().append(html);
+			$.ui.hideMask();
+		},function(){
+			console.log('error')
+		});	
+	}
+
+	var basicUrl = './server/proxy.php?url=http://123.56.235.156:8080/cm/f/interface/dish/list';
+
+
+
+	function getproxy(){
+		$.ajax({
+			url: basicUrl
+		});
+	}
+
+})(af);
+
+
+
+
+
+</script>

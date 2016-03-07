@@ -1,0 +1,82 @@
+<!-- id='addressList' -->
+<div class="grid">
+	<ul class="list">
+ 		<!--<li class="active">
+			<div class="user">
+				<span><i class="icon user"></i>用户名</span>
+				<span><i class="icon phone"></i>13011191283</span>
+			</div>
+			<p>北京市朝阳区东大桥路山水铂宫D做</p>
+			<div class="do">
+				<span class="de"><i class="icon check"></i>默认地址</span>
+				<span class="edit"><i class="icon trash"></i>编辑</span>
+				<span class="del"><i class="icon trash"></i>删除</span>				
+			</div>
+		</li>
+		<li>
+			<div class="user">
+				<span><i class="icon user"></i>用户名</span>
+				<span><i class="icon phone"></i>13011191283</span>
+			</div>
+			<p>北京市朝阳区东大桥路山水铂宫D做</p>
+			<div class="do">
+				<span class="de"><i class="icon check"></i>设为默认</span>
+				<span class="edit"><i class="icon trash"></i>编辑</span>
+				<span class="del"><i class="icon trash"></i>删除</span>
+			</div>
+		</li>--> 	
+	</ul>	
+	<p class='add'><a class="button add" href="#addAddress"><i class="icon add"></i>添加地址</a></p>
+</div>
+
+<script>
+(function(){
+	
+	$.ajax({
+		dataType:'json',
+		url: 'server/addresslist.json'
+	}).then(function(res){
+		var html = template('addressListTpl',res);
+		$('#addressList .grid ul').empty().append(html);		
+	},function(){
+		console.log('error');
+	});
+
+	$('#addressList').unbind('click');
+
+	$('#addressList').on('click','li .edit',function(){
+		$.ui.loadContent('#editadd',false,false);
+	})	
+
+	$('#addressList').on('click','[data-default]',function(){
+		console.log('set default');
+	})
+
+	$('#addressList').on('click','a.add',function(){
+		af.when(
+			$.ui.loadContent('#addAddress',false,false)
+		).then(function(){
+			console.log('ok');
+		},function(){
+
+		});
+	})
+
+	$('#addressList').on('click', '.del', function(event) {
+		event.preventDefault();
+		console.log('del');
+		$.ui.popup({
+		    title:"确定吗？",
+		    message:"确定删除当前地址吗",
+		    cancelText:"想想",
+		    cancelCallback: function(){console.log("cancelled");},
+		    doneText:"没错",
+		    doneCallback: function(){
+
+		    },
+		    cancelOnly:false
+		});
+	});
+	
+})(af)
+</script>

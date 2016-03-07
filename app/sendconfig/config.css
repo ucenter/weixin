@@ -1,0 +1,155 @@
+/*20160228*/
+.send-panel{
+    background-color: #FFFEF9!important;
+}
+.viewport{
+    margin-top:7px;
+    width: 100%;
+}
+
+.container-item{
+
+}
+.container-item .item-title{
+    height: 27px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #BF1313;
+    padding-top: 4px;
+}
+.item-title span{
+    margin-left: 10px;
+}
+.container-item .item-content{
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+.item-content .content-info{
+    width: 102px;
+    height: 104px;
+    display: inline-block;
+    text-align: center;
+    border: solid 1px #D3D7D6;
+    box-shadow:0px -1px 1px #D3D7D6;
+}
+.content-info .content-date{
+    font-size: 45px;
+    color: #C01214;
+    display: inline-block;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: -5px;
+}
+.content-info .content-week{
+     font-size: 14px;
+     color: #333333;
+     display: inline-block;
+     width: 100%;
+ }
+
+.date-title{
+    padding: 0 10px;
+    height: 30px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #ECECEC;
+}
+
+.date-title .arrow-left{
+    float: left;
+    font-style: normal;
+    width: 25px;
+    height: 21px;
+    background: url(arrow-left.png) no-repeat;
+    background-position:0 0;
+    background-size: 12px 21px;
+}
+
+.date-title .date-check{
+    float: left;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    margin-top: 2px;
+}
+.date-check em{
+    font-style: normal;
+    font-size: 12px;
+    color: #323232;
+    margin: 0 4px;
+}
+.date-content ul,li{
+    list-style: none;
+}
+.date-title .arrow-right{
+    float: left;
+    font-style: normal;
+    width: 25px;
+    height: 21px;
+    background: url(arrow-right.png) no-repeat;
+    background-position:0 0;
+    background-size: 12px 21px;
+    margin-left: 12px;
+}
+.date-title .current-month-no-send{
+    float: right;
+    /*margin-right: 10px;*/
+    margin-top: 2px;
+}
+.current-month-no-send span{
+    font-size: 15px;
+    color: #323232;
+}
+.send-checkbox{
+    display: inline-block!important;
+}
+.date-content{
+    margin-top: 20px;
+    font-size: 15px;
+    color: #323232;
+}
+.date-tab{width: 100%;}
+.date-tab .tab-thd{
+    height: 25px;
+    width: 100%;
+}
+.date-tab .tab-tr{
+    height: 70px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+.tab-tr .tab-td{
+    width: 50%;
+    display: inline-block;
+    float: left;
+    margin: 10px 0 10px 0;
+}
+.tab-btn{
+    width: 100px;
+    height: 35px;
+    display: inline-block;
+    border-radius: 3px;
+    line-height: 35px;
+}
+.cancel{
+    background-color: #F58D5A;
+    color: #ffffff;
+}
+.all-cancel{
+    background-color: #F58D5A;
+    color: #ffffff;
+}
+.choose{
+    background-color: #ECECEC;
+}
+.all-choose{
+    background-color: #ECECEC;
+}
+.split-line{
+    background: url(split-line.png) no-repeat;
+    background-size: 100% 100%;
+    height: 12px;
+    width: 100%;
+    float: left;
+}

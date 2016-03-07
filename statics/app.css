@@ -1,0 +1,330 @@
+#afui .header {
+    background: #ccc;
+    border: 0;
+    border-bottom: 1px solid #999;
+    color: #fff;
+}
+#afui>#aside_menu, #afui>#menu.tabletMenu {
+    color: #fff;
+    background: #00AEEF;
+    border-right: 1px solid #999;
+}
+#afui .header h1{line-height: 24px;}
+#afui .button{padding: 12px;}
+#afui input[type=radio]:checked+label:before{background: #5babe6;}
+#afui input[type="radio"]:checked + label {color: #5babe6;}
+#afui .panel{}
+#modalHeader .button.close{
+  border-color: #fff;
+  border-radius:50%;
+}
+.afToast {
+  width: auto;
+  border: solid 1px #72767b;
+  z-index: 1000000;
+  margin: 0px auto;
+  background: #464646;
+  background: rgba(40, 40, 40, 0.75);
+  color: white;
+  opacity: 0.95;
+  height: auto;
+  font-size: 20px;
+  -webkit-transition: all  0.3s;
+  transition: all  0.3s;
+  text-align: left;
+  line-height: 46px;
+  margin: 5px 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.afToast > * {
+  color: inherit;
+}
+.afToast > div {
+  font-size: 16px;margin: 8px;text-align: center;
+}
+.afToast.hidden {
+  opacity: 0.1;
+  height: 5px;
+  overflow: hidden;
+}
+.afToastContainer {
+  position: absolute;top: 0px;left: 0px;z-index: 99999;
+}
+.afToast.success {background: #499349;}
+.afToast.error {background: #AA312A;}
+.afToast.warning {background: #DF8505;}
+
+.afToastContainer.br {bottom: 0px;right: 0px;top: auto;left: auto;}
+.afToastContainer.bl {bottom: 0px;left: 0px;top: auto;right: auto;}
+.afToastContainer.tl {top: 0px;left: 0px;right: auto;bottom: auto;}
+.afToastContainer.tr {top: 0px;  right: 0px;  left: auto;  bottom: auto;}
+.afToastContainer.tc {  top: 0px;  right: 0px;  bottom: auto;  left: 0px;}
+.afToastContainer.bc {  top: auto;  right: 0px;  bottom: 0px;  left: 0px;}
+.afToastContainer.cc {  top: 0;  right: 0px;  bottom: 0px;  left: 0px;margin: auto;width:50%;height: 20%;min-height: 2em;}
+
+#afui .afPopup {
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background: #FAFAFC;padding: 0;
+    color: inherit;border: 1px solid #ccc;
+}
+.afPopup>header {
+    font-weight: 400; font-size: 17px;margin: 0; padding:1.2em 20px .5em;text-align: center;
+}
+.afPopup>header + div{
+	padding: 0 20px;color: #888;
+}
+#afui .afPopup>footer{font-size: 17px;line-height: 42px;margin-top: 20px;}
+#afui .afPopup>footer>a{
+	width: auto; margin: 0;padding: 0;
+	display: block;width: 50%;
+    color: #3CC51F;text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);	
+}
+#afui .afPopup>footer>a.button{
+	border: none;border-radius: 0;font-weight: normal;border-top: 1px solid #ccc;
+}
+#afui .afPopup>footer>a.button#cancel{
+	color: #353535;border-right: 1px solid #ccc;
+}
+
+/*自定义样式*/
+.AbsoluteCenter{position: absolute;left: 0;right: 0;top: 0;bottom: 0;margin: auto;}
+.icomoon img{width: 100%;height: auto;margin-left: -2px;}
+.icomoon{margin-right: 6px;position: relative;top: 2px;}
+.scrollTop{
+	font-size: 18px;    position: fixed;text-align: center;
+    right: 10px;    bottom: 10px; z-index: 999;
+    border: 1px solid #ccc;background: #fff;
+    border-radius: 15px;    width: 30px;height: 30px;
+}
+.scrollTop .icomoon{margin: 0;}
+.scrollTop .icomoon img{margin: 2px 0 0 0;}
+
+/*首页*/
+#afui #main{padding: 0;}
+#main .top{position: relative;}
+#main .top img{width: 100%;height: auto;}
+#main .top .info{height: 30%;color: #fff;text-align: center;top: 20%;}
+#main .top .info ul{padding:10%;list-style: none;text-align: center;}
+#main .top .info ul > li{display: inline-block;}
+#main .top .info ul > li:last-child{}
+#main .top .info ul > li a{color: #fff;text-decoration: none;font-weight: 800;font-size: 120%;padding: 0 30px;}
+#main .list > li{background: #F6F7F1;border-color: #fff;}
+
+
+#addressList ul.list > li:first-child{border-top-style: dashed;}
+#addressList ul.list > li{border:1px dashed #ccc;color: #333;margin: 15px 0;padding: 10px;}
+#addressList ul.list > li.active{color: #333;}
+#addressList ul.list > li .user{margin-bottom: 10px;font-size: 110%;}
+#addressList ul.list > li p{margin: 1em 0;}
+#addressList ul.list > li .user span:first-child{margin-right: 20px;}
+#addressList ul.list > li .do{padding-top: 10px; margin-top: 10px;overflow: hidden;text-align: right;border-top: 1px solid #eee;}
+#addressList ul.list > li .do span{margin-right: 10px;}
+#addressList ul.list > li .do span:first-child{float: left;}
+#addressList .add{text-align: center;}
+#addressList .add a{
+	display: inline-block;padding: 15px 30px;font-size: 150%;color: red;
+	background: none;border:1px dashed red;
+}
+
+#editadd label{text-align: left;}
+#editadd .icon{color: #999;}
+
+
+/*喜欢忌口菜品列表*/
+#afui #veglist{padding: 0;}
+#veglist .nav{position: absolute;top:0;left: 0; width: 90px;height: 100%;border-right: 1px dashed #ccc;background: #eee;}
+#veglist .nav ul.list{background-color: inherit;}
+#veglist .nav ul.list li{border: none;border-bottom: 1px solid #ccc; text-align: center;padding: 10px 0;}
+#veglist .nav ul.list li > a:after{display: none;}
+#veglist .nav ul.list li.divider{padding:10px 0;color: orange;}
+#veglist .nav ul.list li > a{margin: 0;padding: 10px 2px 10px 0;left: 3px;}
+#veglist .nav ul.list li.active{background: #fff;left: 1px;}
+#veglist .nav ul.list li.active > a{left: -1px; color: red;border-left: 2px solid red;font-weight: 400;}
+
+#veglist .veg{width: 100%;height: 100%;position: absolute;}
+#veglist .content{margin-left: 90px;}
+#veglist .content ul{list-style: none;overflow-y:auto;}
+#veglist .content ul > li{display: block;}
+
+#veglist .content .product{position: relative;padding: 10px;}
+#veglist .content .product .img{width: 80px;height: 80px;overflow: hidden;position: absolute;}
+#veglist .content .product .img img{width: 100%;height: auto;}
+#veglist .content .product .title,
+#veglist .content .product p{margin-left: 90px;}
+#veglist .content .product .title{font-weight: bold;}
+#veglist .content .product p{height: 3em;overflow: hidden;}
+#veglist .content .input-group input+label{width: auto;padding-left: 24px;padding-right: 10px;float: none;display: inline-block;}
+#veglist .content .input-group {border: none;border-bottom: 1px solid #eee;border-radius: 0;width: 100%;text-align: center;padding: 10px 0;}
+
+
+/*配送需求*/
+	/*日期对象样式*/
+.monthPanel{width:479px; height:208px;position: absolute;background-color: #ffffff;}
+/*.monthPicker_title{background: none repeat scroll 0 0 #ED5A48;color: #F28578; font-family: 'Arail',"Microsoft Yahei"; font-size: 12px; height: 39px; line-height: 39px; overflow: hidden;text-align: center;}*/
+.monthPicker_title a{margin: 0 10px;cursor: pointer;}
+.monthPicker_title em{margin: 0 8px;cursor: pointer;display: inline-block;font-size: 14px;font-weight: bold;color: #ffffff;float: left;}
+.monthPicker_title em.cur{background: url("app/sendconfig/year-current-bg_06.jpg") no-repeat scroll 17px 34px transparent;font-size: 14px;}
+.monthPicker_title em.leftb{border-left: solid 1px #E3E3E3;}
+.monthPicker_title a.pre{background: url("app/sendconfig/calendar-prev-btn.png") repeat scroll 0 0 transparent;display: block; float: left; height: 19px;margin-left: 96px;margin-right: 15px; margin-top: 10px; width: 19px;}
+.monthPicker_title a.next{background: url("app/sendconfig/calendar-next-bt.png") repeat scroll 0 0 transparent;display: block; float: left; height: 19px;margin-left: 96px;margin-right: 15px; margin-top: 10px; width: 19px;}
+.monthPicker_box{width:178px;height:125px;float: left;margin-top: 10px;color: #B7B7B7 ;}
+.monthPanel .mleft10{margin-left: 10px;}
+.boxPanel{clear: both;height: 148px; border-color: #ffffff;display: inline-block;}
+.monthPicker_box em{height:35px;width:35px;line-height: 35px;display: inline-table;text-align: center;line-height: 35px;border: solid 1px #E3E3E3;cursor: pointer;color: #B7B7B7 ;}
+.monthPicker_box em.clicked{color: #ED5A48;}
+.monthPicker_box em.mr3{margin-right: 6px;}
+.monthPicker_box em.mb3{margin-bottom: 6px;}
+.monthPicker_line{width: 1px;height:120px;border-left: solid 1px #E3E3E3;float: left;margin:10px 10px 10px 0px;}
+.monthPicker_buttons{width:60px;float:left;height:125px;display:inline-block;color: #B7B7B7 ;padding-top: 5px;}
+.monthPicker_buttons a{line-height: 20px;text-align: center;padding: 0px 10px;cursor: pointer;display: inline-block;margin: 5px 0px;border: solid 1px #E3E3E3;}
+.monthPicker_buttons a:hover{color: #ffffff; background-color: #ED5A48;border: solid 1px #ED5A48;}
+.month-bd { float: left;width: 463px; border-color: #ffffff;display: inline-block;}
+.month-bd .top-bg { background: url("app/sendconfig/calendar-shadow_04.png") repeat scroll 0 0 transparent;height: 7px;}
+.monthPanel .left-bg { background: url("app/sendconfig/calendar-shadow_03.png") repeat scroll 0 0 transparent;float: left;height: 208px; overflow: hidden; width: 7px;}
+.monthPanel .right-bg { background: url("app/sendconfig/calendar-shadow_05.jpg") repeat scroll 0 0 transparent;float: left;height: 208px;overflow: hidden;width: 9px;}
+.month-bd .bottom-bg { background: url("app/sendconfig/calendar-shadow_08.jpg") repeat scroll 0 0 transparent; height: 10px;}	
+
+/*20160228*/
+.send-panel{
+    background-color: #FFFEF9!important;
+}
+.viewport{
+    margin-top:7px;
+    width: 100%;
+}
+
+.container-item{
+
+}
+.container-item .item-title{
+    height: 27px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #BF1313;
+    padding-top: 4px;
+}
+.item-title span{
+    margin-left: 10px;
+}
+.container-item .item-content{
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+.item-content .content-info{
+    width: 102px;
+    height: 104px;
+    display: inline-block;
+    text-align: center;
+    border: solid 1px #D3D7D6;
+    box-shadow:0px -1px 1px #D3D7D6;
+}
+.content-info .content-date{
+    font-size: 45px;
+    color: #C01214;
+    display: inline-block;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: -5px;
+}
+.content-info .content-week{
+     font-size: 14px;
+     color: #333333;
+     display: inline-block;
+     width: 100%;
+ }
+
+.date-title{
+    padding: 0 10px;
+    height: 30px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #ECECEC;
+}
+
+.date-title .arrow-left{
+    float: left;
+    font-style: normal;
+    width: 12px;
+    height: 21px;
+    background: url(../app/sendconfig/arrow-left.png) no-repeat;
+    background-position:0 0;
+    background-size: 12px 21px;
+}
+
+.date-title .date-check{
+    float: left;
+    display: inline-block;
+    width: 145px;
+    text-align: center;
+    margin-top: 2px;
+}
+.date-check em{
+    font-style: normal;
+    font-size: 12px;
+    color: #323232;
+    margin: 0 4px;
+}
+
+.date-title .arrow-right{
+    float: left;
+    font-style: normal;
+    width: 12px;
+    height: 21px;
+    background: url(../app/sendconfig/arrow-right.png) no-repeat;
+    background-position:0 0;
+    background-size: 12px 21px;
+}
+.date-title .current-month-no-send{
+    float: right;
+    /*margin-right: 10px;*/
+    margin-top: 2px;
+}
+.current-month-no-send span{
+    font-size: 15px;
+    color: #323232;
+}
+.send-checkbox{
+    display: inline-block!important;
+}
+.date-content{
+    margin-top: 20px;
+    font-size: 15px;
+    color: #323232;
+}
+.date-tab{width: 100%;}
+.date-tab .tab-thd{
+    height: 25px;
+}
+.date-tab .tab-tr{
+    height: 70px;
+}
+.tab-btn{
+    width: 100px;
+    height: 35px;
+    display: inline-block;
+    border-radius: 3px;
+    line-height: 35px;
+}
+.cancel{
+    background-color: #F58D5A;
+    color: #ffffff;
+}
+.all-cancel{
+    background-color: #F58D5A;
+    color: #ffffff;
+}
+.choose{
+    background-color: #ECECEC;
+}
+.all-choose{
+    background-color: #ECECEC;
+}
+.split-line{
+    background: url(../app/sendconfig/split-line.png) no-repeat;
+    background-size: 100% 100%;
+    height: 12px;
+    width: 100%;
+}

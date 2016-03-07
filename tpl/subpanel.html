@@ -1,0 +1,18 @@
+
+<link rel="stylesheet" href="./app/subpanel/subpanels.css">
+<!-- now we start the sub panels -->
+<div id='sub-Panel' style="position:absolute;top:0px;bottom:40px;width:100%"> 
+    <div class="insetPanel default" id='subPanel/page1' style='background:green !important;height:999px'>Page 1</div>
+    <div class="insetPanel" id='subPanel/page2' style='background:red !important'>Page 2</div>
+    <div class="insetPanel" id='subPanel/page3' style='background:blue !important' scrolling="no">Page 3</div>
+</div>
+<!-- this is the footer.  If must have class "subpanelNav" -->
+<div class="subpanelNav" style="position:absolute;bottom:0px;height:40px;width:100%;line-height:24px;font-size:14px;text-align:center;background:black;color:white;">
+    <a class='icon headset' href="#subPanel/page1"></a> | 
+    <a class='icon wifi' href="#subPanel/page2"></a> | 
+    <a class='icon html5' href="#subPanel/page3"></a> 
+</div>
+<script type="text/javascript">
+
+    $("#sub-Panel").subpanel();
+</script>
