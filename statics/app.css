@@ -91,6 +91,7 @@
 
 /*自定义样式*/
 .AbsoluteCenter{position: absolute;left: 0;right: 0;top: 0;bottom: 0;margin: auto;}
+.text-center{text-align: center;}
 .icomoon img{width: 100%;height: auto;margin-left: -2px;}
 .icomoon{margin-right: 6px;position: relative;top: 2px;}
 .scrollTop{
@@ -101,6 +102,12 @@
 }
 .scrollTop .icomoon{margin: 0;}
 .scrollTop .icomoon img{margin: 2px 0 0 0;}
+.loading{
+  display: block;position: absolute;top: 45%;background: inherit;
+}
+.loadfailed{
+  margin-top: 10px;text-align: center;
+}
 
 /*首页*/
 #afui #main{padding: 0;}

@@ -9,12 +9,20 @@ function nano(template, data) {
 
 function loadedPanel(what) {
     //We are going to set the badge as the number of li elements inside the target
-    $.ui.updateBadge("#aflink", $("#af").find("li").length);
+    //$.ui.updateBadge("#aflink", $("#af").find("li").length);
+    // @what为当前加载的panel对象
     var id = what.id;
     var panel = document.getElementById(id);
+
+	$(panel).html("<div class='ui-loader loading'><span class='ui-icon ui-icon-loading spin'></span></div>");
+
     $.ajax({url: 'tpl/'+id+'.html'}).then(function(res){
     	$(panel).empty().append(res);
-    })
+    },function(){
+    	$(panel).empty().append('<p class="loadfailed">加载失败，请稍后再试</p>');
+    });    	
+
+
 }
 
 //首页内容加载
